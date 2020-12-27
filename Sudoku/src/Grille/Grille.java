@@ -81,26 +81,5 @@ public class Grille {
         }
         return true;
     }
-
-    public boolean isCorrect(int i,int j,int v){
-        //On cherche valeur dans la ligne
-        for(int k=0;k<9;k++){
-            if(grille[i][k]==v) return false;
-        }
-        //On cherche valeur dans la colonne
-        for(int k=0;k<9;k++){
-            if (grille[k][j]==v) return false;
-        }
-        //On cherche valeur dans le carré
-        int i0=i-i%3;
-        int j0=j-j%3;
-        for(int ki=i0;ki<i0+3;ki++){
-            for (int kj=0;kj<j0+3;kj++){
-                if(grille[ki][kj]==v) return false;
-            }
-        }
-        //True quand tout est ok
-        return true;
-    }
 }
 
